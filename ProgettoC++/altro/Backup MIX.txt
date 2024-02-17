@@ -1,0 +1,773 @@
+#include<iostream>
+#include<windows.h>
+#include<locale.h>
+#include<locale>
+#include<mmsystem.h>
+
+using namespace std;
+
+#pragma comment(lib, "winmm.lib")
+
+
+/* Le due funzioni sottostanti servono per il display della schermata errore in un enignma
+   e la schermata corretto in un enignma                                                  */
+
+void schermataErrore(); //
+
+void schermataCorretto(); //
+
+void schermataScegLivello(); //
+
+void funzionamentoScorriLivello(int& a);
+
+int scegliLivello(int a);
+
+void schermataPrincipale();
+
+void arrivedercieesci(); //
+
+int esercizioMatematico1() {
+	do {
+		int risposta = 0;
+		bool esciEnigma = true;
+		schermataPrincipale();
+		cout << "*                                                                                     *\n";
+		cout << "*                             _______________________                                 *\n";
+		cout << "*                            |                       |                                *\n";
+		cout << "*                            |		9 + 4 * 2 = ?     |                                *\n";
+		cout << "*                            |_______________________|                                *\n";
+		cout << "*                                                                                     *\n";
+		cout << "*														                               *\n";
+		cout << "*																                       *\n";
+		cout << "*			           [1] = 26        [2] = 17        [3] = 13	                       *\n";
+		cout << "*										                                               *\n";
+		cout << "*			  																           *\n";
+		cout << "*                                                                                     *\n";
+		cout << "***************************************************************************************\n\n\n";
+		cin >> risposta;
+		if (risposta >= 3 || risposta <= 1)
+			return -1;
+		else if (risposta == 2) {
+			schermataCorretto();
+			esciEnigma = true;
+			return 1;
+		}
+		else
+		{
+			schermataErrore();
+			esciEnigma = false;
+		}
+	} while (esciEnigma);
+
+}
+int esercizioMatematico2() {
+	do {
+		int risposta = 0;
+		bool esciEnigma = true;
+		schermataPrincipale();
+		cout << "*                                                                                     *\n";
+		cout << "*                      _________________________________                              *\n";
+		cout << "*                     |                                 |                             *\n";
+		cout << "*                     |	888 + 88 + 8 + 8 + 8 = ?     |                             *\n";
+		cout << "*                     |_________________________________|                             *\n";
+		cout << "*                                                                                     *\n";
+		cout << "*														                               *\n";
+		cout << "*																                       *\n";
+		cout << "*			       [1] = 1000        [2] = 999         [3] = 1010	                   *\n";
+		cout << "*										                                               *\n";
+		cout << "*			  																           *\n";
+		cout << "*                                                                                     *\n";
+		cout << "***************************************************************************************\n\n\n";
+		cin >> risposta;
+		if (risposta >= 3 || risposta <= 1)
+			return -1;
+		else if (risposta == 1) {
+			schermataCorretto();
+			esciEnigma = true;
+			return 1;
+		}
+		else
+		{
+			schermataErrore();
+			esciEnigma = false;
+		}
+	} while (esciEnigma);
+
+}
+
+int esercizioMatematico3() {
+	do {
+		int risposta = 0;
+		bool esciEnigma = true;
+		schermataPrincipale();
+		cout << "*                                                                                     *\n";
+		cout << "*                      __________________________________                             *\n";
+		cout << "*                     |                                  |                            *\n";
+		cout << "*                     |	 36, 34, 30, 28, 24, ...?     |                            *\n";
+		cout << "*                     |__________________________________|                            *\n";
+		cout << "*                                                                                     *\n";
+		cout << "*														                               *\n";
+		cout << "*																                       *\n";
+		cout << "*			       [1] = 20        [2] = 22         [3] = 26     	                   *\n";
+		cout << "*										                                               *\n";
+		cout << "*			  																           *\n";
+		cout << "*                                                                                     *\n";
+		cout << "***************************************************************************************\n\n\n";
+		cin >> risposta;
+		if (risposta >= 3 || risposta <= 1)
+			return -1;
+		else if (risposta == 2) {
+			schermataCorretto();
+			esciEnigma = true;
+			return 1;
+		}
+		else
+		{
+			schermataErrore();
+			esciEnigma = false;
+		}
+	} while (esciEnigma);
+
+}
+
+int esercizioMatematico4() {
+	do {
+		int risposta = 0;
+		bool esciEnigma = true;
+		schermataPrincipale();
+		cout << "*                                                                                     *\n";
+		cout << "*                      __________________________________                             *\n";
+		cout << "*                     |                                  |                            *\n";
+		cout << "*                     |	 36, 34, 30, 28, 24, ...?     |                            *\n";
+		cout << "*                     |__________________________________|                            *\n";
+		cout << "*                                                                                     *\n";
+		cout << "*														                               *\n";
+		cout << "*																                       *\n";
+		cout << "*			       [1] = 20        [2] = 22         [3] = 26     	                   *\n";
+		cout << "*										                                               *\n";
+		cout << "*			  																           *\n";
+		cout << "*                                                                                     *\n";
+		cout << "***************************************************************************************\n\n\n";
+		cin >> risposta;
+		if (risposta >= 3 || risposta <= 1)
+			return -1;
+		else if (risposta == 2) {
+			schermataCorretto();
+			esciEnigma = true;
+			return 1;
+		}
+		else
+		{
+			schermataErrore();
+			esciEnigma = false;
+		}
+	} while (esciEnigma);
+
+}
+
+int esercizioMatematico5() {
+	do {
+		int risposta = 0;
+		bool esciEnigma = true;
+		schermataPrincipale();
+		cout << "*                                                                                     *\n";
+		cout << "*                      ________________________________                               *\n";
+		cout << "*                     |                                |                              *\n";
+		cout << "*                     |	 3 ^ ( 4 ) / 3 ^ ( 2 )      |                              *\n";
+		cout << "*                     |________________________________|                              *\n";
+		cout << "*                                                                                     *\n";
+		cout << "*														                               *\n";
+		cout << "*																                       *\n";
+		cout << "*			        [1] = 12        [2] = 3         [3] = 9     	                   *\n";
+		cout << "*										                                               *\n";
+		cout << "*			  																           *\n";
+		cout << "*                                                                                     *\n";
+		cout << "***************************************************************************************\n\n\n";
+		cin >> risposta;
+		if (risposta >= 3 || risposta <= 1)
+			return -1;
+		else if (risposta == 2) {
+			schermataCorretto();
+			esciEnigma = true;
+			return 1;
+		}
+		else
+		{
+			schermataErrore();
+			esciEnigma = false;
+		}
+	} while (esciEnigma);
+
+}
+
+int esercizioMatematico6() {
+	do {
+		int risposta = 0;
+		bool esciEnigma = true;
+		schermataPrincipale();
+		cout << "*                                                                                     *\n";
+		cout << "*                           _________________________                                 *\n";
+		cout << "*                          |                         |                                *\n";
+		cout << "*                          |	 3 + 2 * ( 8 - 3 )    |                                *\n";
+		cout << "*                          |_________________________|                                *\n";
+		cout << "*                                                                                     *\n";
+		cout << "*														                               *\n";
+		cout << "*																                       *\n";
+		cout << "*			           [1] = 15        [2] = 24        [3] = 13                        *\n";
+		cout << "*										                                               *\n";
+		cout << "*			  																           *\n";
+		cout << "*                                                                                     *\n";
+		cout << "***************************************************************************************\n\n\n";
+		cin >> risposta;
+		if (risposta >= 3 || risposta <= 1)
+			return -1;
+		else if (risposta == 3) {
+			schermataCorretto();
+			esciEnigma = true;
+			return 1;
+		}
+		else
+		{
+			schermataErrore();
+			esciEnigma = false;
+		}
+	} while (esciEnigma);
+
+}
+
+int esercizioMatematico7() {
+	do {
+		int risposta = 0;
+		bool esciEnigma = true;
+		schermataPrincipale();
+		cout << "*                                                                                     *\n";
+		cout << "*                        _______________________________                              *\n";
+		cout << "*                       |                               |                             *\n";
+		cout << "*                       |	 9 - 6 + 2 * - ( 2 ^ 2 )     |                             *\n";
+		cout << "*                       |_______________________________|                             *\n";
+		cout << "*                                                                                     *\n";
+		cout << "*														                               *\n";
+		cout << "*																                       *\n";
+		cout << "*			          [1] = 24        [2] = 20         [3] = - 20 	                   *\n";
+		cout << "*										                                               *\n";
+		cout << "*			  																           *\n";
+		cout << "*                                                                                     *\n";
+		cout << "***************************************************************************************\n\n\n";
+		cin >> risposta;
+		if (risposta >= 3 || risposta <= 1)
+			return -1;
+		else if (risposta == 3) {
+			schermataCorretto();
+			esciEnigma = true;
+			return 1;
+		}
+		else
+		{
+			schermataErrore();
+			esciEnigma = false;
+		}
+	} while (esciEnigma);
+
+}
+
+int esercizioMatematico8() {
+	do {
+		int risposta = 0;
+		bool esciEnigma = true;
+		schermataPrincipale();
+		cout << "*                                                                                     *\n";
+		cout << "*                            ________________________                                 *\n";
+		cout << "*                           |                        |                                *\n";
+		cout << "*                           |	   8.563 + 4.8292     |                                *\n";
+		cout << "*                           |________________________|                                *\n";
+		cout << "*                                                                                     *\n";
+		cout << "*														                               *\n";
+		cout << "*																                       *\n";
+		cout << "*			[1] = 13.3922        [2] = 13.4022         [3] = 13.4922                   *\n";
+		cout << "*										                                               *\n";
+		cout << "*			  																           *\n";
+		cout << "*                                                                                     *\n";
+		cout << "***************************************************************************************\n\n\n";
+		cin >> risposta;
+		if (risposta >= 3 || risposta <= 1)
+			return -1;
+		else if (risposta == 1) {
+			schermataCorretto();
+			esciEnigma = true;
+			return 1;
+		}
+		else
+		{
+			schermataErrore();
+			esciEnigma = false;
+		}
+	} while (esciEnigma);
+
+}
+
+int esercizioMatematico9() {
+	do {
+		int risposta = 0;
+		bool esciEnigma = true;
+		schermataPrincipale();
+		cout << "*                                                                                     *\n";
+		cout << "*                         ______________________________                             *\n";
+		cout << "*                        |                              |                            *\n";
+		cout << "*                        |	    - 15 + ( - 5 x ) = 0     |                            *\n";
+		cout << "*                        |______________________________|                            *\n";
+		cout << "*                                                                                     *\n";
+		cout << "*														                               *\n";
+		cout << "*																                       *\n";
+		cout << "*			          [1] = 6        [2] = 3         [3] = -3    	                   *\n";
+		cout << "*										                                               *\n";
+		cout << "*			  																           *\n";
+		cout << "*                                                                                     *\n";
+		cout << "***************************************************************************************\n\n\n";
+		cin >> risposta;
+		if (risposta >= 3 || risposta <= 1)
+			return -1;
+		else if (risposta == 3) {
+			schermataCorretto();
+			esciEnigma = true;
+			return 1;
+		}
+		else
+		{
+			schermataErrore();
+			esciEnigma = false;
+		}
+	} while (esciEnigma);
+
+}
+
+int esercizioMatematico10() {
+	do {
+		int risposta = 0;
+		bool esciEnigma = true;
+		schermataPrincipale();
+		cout << "*                                                                                     *\n";
+		cout << "*                      ___________________________________                            *\n";
+		cout << "*                     |                                   |                           *\n";
+		cout << "*                     |	 37, 37, 24, 24, 11, 11, ?     |                           *\n";
+		cout << "*                     |___________________________________|                           *\n";
+		cout << "*                                                                                     *\n";
+		cout << "*														                               *\n";
+		cout << "*																                       *\n";
+		cout << "*			         [1] = 13        [2] = 0         [3] = -2     	                   *\n";
+		cout << "*										                                               *\n";
+		cout << "*			  																           *\n";
+		cout << "*                                                                                     *\n";
+		cout << "***************************************************************************************\n\n\n";
+		cin >> risposta;
+		if (risposta >= 3 || risposta <= 1)
+			return -1;
+		else if (risposta == 3) {
+			schermataCorretto();
+			esciEnigma = true;
+			return 1;
+		}
+		else
+		{
+			schermataErrore();
+			esciEnigma = false;
+		}
+	} while (esciEnigma);
+
+}
+
+
+void schermataPrincipale() {
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN);
+#if (1)
+	setlocale(LC_ALL, ".UTF-8");
+	std::locale::global(std::locale(".UTF-8"));
+#endif		
+	cout << "***************************************************************************************\n";
+	cout << "*                                                                                     *\n";
+	cout << "*   ░▒▓████████▓▒░▒▓███████▓▒░░▒▓█▓▒░░▒▓██████▓▒░░▒▓██████████████▓▒░ ░▒▓██████▓▒░    *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░   *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░   *\n";
+	cout << "*   ░▒▓██████▓▒░ ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒▒▓███▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░   *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░   *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░   *\n";
+	cout << "*   ░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░   *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n";
+}
+
+int scegliLivello(int a) {
+	switch (a) {
+	case 1: return esercizioMatematico1();
+	case 2: return esercizioMatematico2();
+	case 3: return esercizioMatematico3();
+	case 4: return esercizioMatematico4();
+	case 5: return esercizioMatematico5();
+	case 6: return esercizioMatematico6();
+	case 7: return esercizioMatematico7();
+	case 8: return esercizioMatematico8();
+	case 9: return esercizioMatematico9();
+	case 10: return esercizioMatematico10();
+	}
+}
+
+void funzionamentoScorriLivello(int& a) {
+	for (i = a; i <= 10; i++) {
+		if (scegliLivello(i) == -1) {
+			schermataErrore();
+			break;
+		}
+	}
+}
+
+
+
+void esciEnigma()
+{
+	system("cls");
+
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN);
+
+#if (1)
+	setlocale(LC_ALL, ".UTF-8");
+	std::locale::global(std::locale(".UTF-8"));
+#endif		
+
+	cout << "***************************************************************************************\n";
+	cout << "*                                                                                     *\n";
+	cout << "*   ░▒▓██████▓▒░ ░▒▓███████▓▒░ ░▒▓██████▓▒░░▒▓████████▓▒░▒▓█▓▒░▒▓████████▓▒░          *\n";
+	cout << "*   ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░                 *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░    ░▒▓██▓▒░░▒▓█▓▒░▒▓█▓▒░                 *\n";
+	cout << "*   ░▒▓█▓▒▒▓███▓▒░▒▓███████▓▒░░▒▓████████▓▒░  ░▒▓██▓▒░  ░▒▓█▓▒░▒▓██████▓▒░            *\n";
+	cout << "*   ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓██▓▒░    ░▒▓█▓▒░▒▓█▓▒░                 *\n";
+	cout << "*   ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░▒▓█▓▒░                 *\n";
+	cout << "*   ░▒▓██████▓▒░ ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░▒▓█▓▒░▒▓████████▓▒░          *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_BLUE);
+	cout << "*             !             !             !             !             !             ! *\n";
+	cout << "*      !            !             !             !             !             !         *\n";
+	cout << "*             !             !             !             !             !             ! *\n";
+	cout << "*      !            !             !             !             !             !         *\n";
+	cout << "*             !             !             !             !             !             ! *\n";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED);
+	cout << "*                         ______________________________                              *\n";
+	cout << "*                        |/> GRAZIE PER AVER GIOCATO !!!|                             *\n";
+	cout << "*                        |  *     *     *      *       *|                             *\n";
+	cout << "*       ____             |     *      *            *    |                __           *\n";
+	cout << "*      |    |            |       *       *    *     *   |             __|  |__        *\n";
+	cout << "*      |____|            |    *      *      *           |            |__    __|       *\n";
+	cout << "*                        |        *      *     *    *   |               |__|          *\n";
+	cout << "*                        |   *        *     *           |                             *\n";
+	cout << "*                        |       *        *     *    *  |                             *\n";
+	cout << "*                        |     *      *         *       |                             *\n";
+	cout << "*                        |______________________________|                             *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n\n\n";
+
+	Sleep(3000);
+
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_RED);
+
+
+	system("msg * Non dimenticare di visitare la pagina: https://github.com/DennisMihaltan");
+
+	system("exit");
+}
+
+
+void schermataErrore()
+{
+	system("cls");
+
+#if (1)
+	setlocale(LC_ALL, ".UTF-8");
+	std::locale::global(std::locale(".UTF-8"));
+#endif
+
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED);
+
+
+
+	cout << "***************************************************************************************\n";
+	cout << "*                                                                                     *\n";
+	cout << "*   ░▒▓████████▓▒░▒▓███████▓▒░░▒▓███████▓▒░ ░▒▓██████▓▒░░▒▓███████▓▒░░▒▓████████▓▒░   *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░          *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░          *\n";
+	cout << "*   ░▒▓██████▓▒░ ░▒▓███████▓▒░░▒▓███████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓███████▓▒░░▒▓██████▓▒░     *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░          *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░          *\n";
+	cout << "*   ░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░   *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n";
+	cout << "*             !             !             !             !             !             ! *\n";
+	cout << "*      !            !             !             !             !             !         *\n";
+	cout << "*             !             !             !             !             !             ! *\n";
+	cout << "*      !            !             !             !             !             !         *\n";
+	cout << "*             !             !             !             !             !             ! *\n";
+	cout << "*                         ______________________________                              *\n";
+	cout << "*                        |/> RIPROVA, NON TI ABBATTERE !|                             *\n";
+	cout << "*                        |  *     *     *      *       *|                             *\n";
+	cout << "*       ____             |     *      *            *    |                __           *\n";
+	cout << "*      |    |            |       *       *    *     *   |             __|  |__        *\n";
+	cout << "*      |____|            |    *      *      *           |            |__    __|       *\n";
+	cout << "*                        |        *      *     *    *   |               |__|          *\n";
+	cout << "*                        |   *        *     *           |                             *\n";
+	cout << "*                        |       *        *     *    *  |                             *\n";
+	cout << "*                        |     *      *         *       |                             *\n";
+	cout << "*                        |______________________________|                             *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n\n\n";
+
+	Sleep(3000);
+
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_RED);
+
+	system("exit");
+}
+
+
+void schermataCorretto()
+{
+	system("cls");
+
+#if (1)
+	setlocale(LC_ALL, ".UTF-8");
+	std::locale::global(std::locale(".UTF-8"));
+#endif
+
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN);
+
+
+
+	cout << "***************************************************************************************\n";
+	cout << "*                                                                                     *\n";
+	cout << "*   ░▒▓████████▓▒░░▒▓███████▓▒░░▒▓██████▓▒░▒▓████████▓▒░▒▓████████▓▒░▒▓██████▓▒░      *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▒░      ░▒▓█▓▒░  ░▒▓█▓▒░░▒▓█▓▒░     *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▒░      ░▒▓█▓▒░  ░▒▓█▓▒░░▒▓█▓▒░     *\n";
+	cout << "*   ░▒▓██████▓▒░  ░▒▓██████▓▒░░▒▓████████▓▒░ ░▒▓█▓▒░      ░▒▓█▓▒░  ░▒▓█▓▒░░▒▓█▓▒░     *\n";
+	cout << "*   ░▒▓█▓▒░             ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▒░      ░▒▓█▓▒░  ░▒▓█▓▒░░▒▓█▓▒░     *\n";
+	cout << "*   ░▒▓█▓▒░             ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▒░      ░▒▓█▓▒░  ░▒▓█▓▒░░▒▓█▓▒░     *\n";
+	cout << "*   ░▒▓████████▓▒░▒▓███████▓▒░░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▒░      ░▒▓█▓▒░   ░▒▓██████▓▒░      *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n";
+	cout << "*             !             !             !             !             !             ! *\n";
+	cout << "*      !            !             !             !             !             !         *\n";
+	cout << "*             !             !             !             !             !             ! *\n";
+	cout << "*      !            !             !             !             !             !         *\n";
+	cout << "*             !             !             !             !             !             ! *\n";
+	cout << "*                         ______________________________                              *\n";
+	cout << "*                        |/> AL PROSSIMO LIVELLO !!!    |                             *\n";
+	cout << "*                        |  *     *     *      *       *|                             *\n";
+	cout << "*       ____             |     *      *            *    |                __           *\n";
+	cout << "*      |    |            |       *       *    *     *   |             __|  |__        *\n";
+	cout << "*      |____|            |    *      *      *           |            |__    __|       *\n";
+	cout << "*                        |        *      *     *    *   |               |__|          *\n";
+	cout << "*                        |   *        *     *           |                             *\n";
+	cout << "*                        |       *        *     *    *  |                             *\n";
+	cout << "*                        |     *      *         *       |                             *\n";
+	cout << "*                        |______________________________|                             *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n\n\n";
+
+	Sleep(3000);
+
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_RED);
+
+	system("exit");
+}
+
+
+void schermataScegliLivello()
+{
+	int a = 0;
+
+	system("cls");
+
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN);
+
+#if (1)
+	setlocale(LC_ALL, ".UTF-8");
+	std::locale::global(std::locale(".UTF-8"));
+#endif		
+
+
+
+	cout << "***************************************************************************************\n";
+	cout << "*                                                                                     *\n";
+	cout << "*                 ███████╗ ██████╗███████╗ ██████╗ ██╗     ██╗                        *\n";
+	cout << "*                 ██╔════╝██╔════╝██╔════╝██╔════╝ ██║     ██║██╗                     *\n";
+	cout << "*                 ███████╗██║     █████╗  ██║  ███╗██║     ██║╚═╝                     *\n";
+	cout << "*                 ╚════██║██║     ██╔══╝  ██║   ██║██║     ██║██╗                     *\n";
+	cout << "*                 ███████║╚██████╗███████╗╚██████╔╝███████╗██║╚═╝                     *\n";
+	cout << "*                 ╚══════╝ ╚═════╝╚══════╝ ╚═════╝ ╚══════╝╚═╝                        *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED);
+	cout << "*             !             !             !             !             !             ! *\n";
+	cout << "*      !            !             !             !             !             !         *\n";
+	cout << "*             !             !             !             !             !             ! *\n";
+	cout << "*      !            !             !             !             !             !         *\n";
+	cout << "*             !             !             !             !             !             ! *\n";
+	cout << "*                         ______________________________                              *\n";
+	cout << "*                        |/> SCEGLI UN LIVELLO:         |                             *\n";
+	cout << "*                        |  *     *     *      *       *|                             *\n";
+	cout << "*       ____             |     *      *            *    |                __           *\n";
+	cout << "*      |    |            |       *       *    *     *   |             __|  |__        *\n";
+	cout << "*      |____|            |    *      *      *           |            |__    __|       *\n";
+	cout << "*                        |        *      *     *    *   |               |__|          *\n";
+	cout << "*                        |   *        *     *           |                             *\n";
+	cout << "*                        |       *        *     *    *  |                             *\n";
+	cout << "*                        |     *      *         *       |                             *\n";
+	cout << "*                        |______________________________|                             *\n";
+	cout << "*                                                                                     *\n";
+	cout << "*   [1] Livello 1                                                                     *\n";
+	cout << "*   [2] Livello 2                                                                     *\n";
+	cout << "*   [3] Livello 3                                                                     *\n";
+	cout << "*   [4] Livello 4                                                                     *\n";
+	cout << "*   [5] Livello 5                                                                     *\n";
+	cout << "*   [6] Livello 6                                                                     *\n";
+	cout << "*   [7] Livello 7                                                                     *\n";
+	cout << "*   [8] Livello 8                                                                     *\n";
+	cout << "*   [9] Livello 9                                                                     *\n";
+	cout << "*   [10] Livello 10                                                                   *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n\n\n";
+
+	switch (a) {
+	case 1: esercizioMatematico1();
+	case 2: esercizioMatematico2();
+	case 3: esercizioMatematico3();
+	case 4: esercizioMatematico4();
+	case 5: esercizioMatematico5();
+	case 6: esercizioMatematico6();
+	case 7: esercizioMatematico7();
+	case 8: esercizioMatematico8();
+	case 9: esercizioMatematico9();
+	case 10: esercizioMatematico10();
+	}
+
+	Sleep(3000); 
+
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_RED);
+
+	system("exit");
+
+}
+
+
+using namespace std;
+
+int main()
+{
+	int SceltaLivello = 1;
+
+	//bool gameLoop = false;
+
+	do {
+
+		int sceltaMenuPrincipale = 0;
+
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN);
+
+	//PlaySound(TEXT("musicwav.wav"), NULL, SND_FILENAME | SND_SYNC | SND_LOOP);
+
+
+
+	system("start musicwav.wav");
+
+	system("start hideantichrome.vbs");    // --> modifico il NOMEUTENTE
+	
+	Sleep(1000);
+
+	system("cls");
+
+
+#if (1)
+	setlocale(LC_ALL, ".UTF-8");
+	std::locale::global(std::locale(".UTF-8"));
+#endif
+
+	cout << "***************************************************************************************\n";
+	cout << "*                                                                                     *\n";
+	cout << "*   ░▒▓████████▓▒░▒▓███████▓▒░░▒▓█▓▒░░▒▓██████▓▒░░▒▓██████████████▓▒░ ░▒▓██████▓▒░    *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░   *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░   *\n";
+	cout << "*   ░▒▓██████▓▒░ ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒▒▓███▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░   *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░   *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░   *\n";
+	cout << "*   ░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░   *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED);
+	cout << "*                                                                                     *\n";
+	cout << "*      [1] Inizia                                                                     *\n";
+	cout << "*      [2] Scegli un livello                                                          *\n";
+	cout << "*      [3] Esci                                                                       *\n";
+	cout << "*                                                                                     *\n";
+	cout << "*                         ______________________________                              *\n";
+	cout << "*                        |/> Hello world !!!            |                             *\n";
+	cout << "*                        |  *     *     *      *       *|                             *\n";
+	cout << "*       ____             |     *      *            *    |                __           *\n";
+	cout << "*      |    |            |       *       *    *     *   |             __|  |__        *\n";
+	cout << "*      |____|            |    *      *      *           |            |__    __|       *\n";
+	cout << "*                        |        *      *     *    *   |               |__|          *\n";
+	cout << "*                        |   *        *     *           |                             *\n";
+	cout << "*                        |       *        *     *    *  |                             *\n";
+	cout << "*                        |     *      *         *       |                             *\n";
+	cout << "*                        |______________________________|                             *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n\n\n";
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_BLUE);
+
+	cout << "/> ";
+
+	cin >> sceltaMenuPrincipale;
+
+
+	bool esciSwitchMenuPrinipale = false;
+
+	switch (sceltaMenuPrincipale)
+	{
+	case 1:
+		funzionamentoScorriLivello(SceltaLivello);
+		break;
+
+	case 2:
+
+		schermataScegliLivello();
+		cin >> sceltaLivello;
+		if (sceltaLivello < 1 || SceltaLivello > 10) {
+			schermataErrore();
+			break;
+		}
+		funzionamentoScorriLivello(sceltaLivello);
+
+		break;
+
+
+	case 3:
+
+		esciEnigma();
+		//gameLoop = false;
+		break;
+	}
+} //while (gameLoop);
+	while (true);
+
+return 0;
+
+
+	//std::cout << text_utf8<< "\n";
+
+	
+}

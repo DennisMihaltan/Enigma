@@ -1,0 +1,13 @@
+﻿  Origine.cpp
+C:\Users\Dennis.Mihaltan\OneDrive\Desktop\ProgettoC++\GAME\Origine.cpp(469): warning C4715: 'esercizioMatematico2': non tutti i percorsi di controllo restituiscono un valore
+C:\Users\Dennis.Mihaltan\OneDrive\Desktop\ProgettoC++\GAME\Origine.cpp(434): warning C4715: 'esercizioMatematico1': non tutti i percorsi di controllo restituiscono un valore
+C:\Users\Dennis.Mihaltan\OneDrive\Desktop\ProgettoC++\GAME\Origine.cpp(505): warning C4715: 'esercizioMatematico3': non tutti i percorsi di controllo restituiscono un valore
+C:\Users\Dennis.Mihaltan\OneDrive\Desktop\ProgettoC++\GAME\Origine.cpp(541): warning C4715: 'esercizioMatematico4': non tutti i percorsi di controllo restituiscono un valore
+C:\Users\Dennis.Mihaltan\OneDrive\Desktop\ProgettoC++\GAME\Origine.cpp(577): warning C4715: 'esercizioMatematico5': non tutti i percorsi di controllo restituiscono un valore
+C:\Users\Dennis.Mihaltan\OneDrive\Desktop\ProgettoC++\GAME\Origine.cpp(613): warning C4715: 'esercizioMatematico6': non tutti i percorsi di controllo restituiscono un valore
+C:\Users\Dennis.Mihaltan\OneDrive\Desktop\ProgettoC++\GAME\Origine.cpp(649): warning C4715: 'esercizioMatematico7': non tutti i percorsi di controllo restituiscono un valore
+C:\Users\Dennis.Mihaltan\OneDrive\Desktop\ProgettoC++\GAME\Origine.cpp(685): warning C4715: 'esercizioMatematico8': non tutti i percorsi di controllo restituiscono un valore
+C:\Users\Dennis.Mihaltan\OneDrive\Desktop\ProgettoC++\GAME\Origine.cpp(721): warning C4715: 'esercizioMatematico9': non tutti i percorsi di controllo restituiscono un valore
+C:\Users\Dennis.Mihaltan\OneDrive\Desktop\ProgettoC++\GAME\Origine.cpp(759): warning C4715: 'esercizioMatematico10': non tutti i percorsi di controllo restituiscono un valore
+C:\Users\Dennis.Mihaltan\OneDrive\Desktop\ProgettoC++\GAME\Origine.cpp(774): warning C4715: 'scegliLivello': non tutti i percorsi di controllo restituiscono un valore
+  GAME.vcxproj -> C:\Users\Dennis.Mihaltan\OneDrive\Desktop\ProgettoC++\GAME\x64\Debug\GAME.exe

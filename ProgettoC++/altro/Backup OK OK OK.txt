@@ -1,0 +1,356 @@
+#include<iostream>
+#include<windows.h>
+#include<locale.h>
+#include<locale>
+#include<mmsystem.h>
+
+using namespace std;
+
+#pragma comment(lib, "winmm.lib")
+
+
+/* Le due funzioni sottostanti servono per il display della schermata errore in un enignma
+   e la schermata corretto in un enignma                                                  */
+
+void schermataErrore(); //
+
+void schermataCorretto(); //
+
+void schermataScegLivello(); //
+
+void funzionamentoScorriLivello(int& a);
+
+int scegliLivello(int a);
+
+void schermataPrincipale();
+
+void arrivedercieesci(); //
+
+int esercizioMatematico1(bool& b);
+
+int esercizioMatematico2();
+
+int esercizioMatematico3();
+
+int esercizioMatematico4();
+
+int esercizioMatematico5();
+
+int esercizioMatematico6();
+
+int esercizioMatematico7();
+
+int esercizioMatematico8();
+
+int esercizioMatematico9();
+
+int esercizioMatematico10();
+
+
+
+void arrivedercieesci()
+{
+	system("cls");
+
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN);
+
+#if (1)
+	setlocale(LC_ALL, ".UTF-8");
+	std::locale::global(std::locale(".UTF-8"));
+#endif		
+
+	cout << "***************************************************************************************\n";
+	cout << "*                                                                                     *\n";
+	cout << "*   ░▒▓██████▓▒░ ░▒▓███████▓▒░ ░▒▓██████▓▒░░▒▓████████▓▒░▒▓█▓▒░▒▓████████▓▒░          *\n";
+	cout << "*   ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░                 *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░    ░▒▓██▓▒░░▒▓█▓▒░▒▓█▓▒░                 *\n";
+	cout << "*   ░▒▓█▓▒▒▓███▓▒░▒▓███████▓▒░░▒▓████████▓▒░  ░▒▓██▓▒░  ░▒▓█▓▒░▒▓██████▓▒░            *\n";
+	cout << "*   ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓██▓▒░    ░▒▓█▓▒░▒▓█▓▒░                 *\n";
+	cout << "*   ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░▒▓█▓▒░                 *\n";
+	cout << "*   ░▒▓██████▓▒░ ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░▒▓█▓▒░▒▓████████▓▒░          *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_BLUE);
+	cout << "*             !             !             !             !             !             ! *\n";
+	cout << "*      !            !             !             !             !             !         *\n";
+	cout << "*             !             !             !             !             !             ! *\n";
+	cout << "*      !            !             !             !             !             !         *\n";
+	cout << "*             !             !             !             !             !             ! *\n";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED);
+	cout << "*                         ______________________________                              *\n";
+	cout << "*                        |/> GRAZIE PER AVER GIOCATO !!!|                             *\n";
+	cout << "*                        |  *     *     *      *       *|                             *\n";
+	cout << "*       ____             |     *      *            *    |                __           *\n";
+	cout << "*      |    |            |       *       *    *     *   |             __|  |__        *\n";
+	cout << "*      |____|            |    *      *      *           |            |__    __|       *\n";
+	cout << "*                        |        *      *     *    *   |               |__|          *\n";
+	cout << "*                        |   *        *     *           |                             *\n";
+	cout << "*                        |       *        *     *    *  |                             *\n";
+	cout << "*                        |     *      *         *       |                             *\n";
+	cout << "*                        |______________________________|                             *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n\n\n";
+
+	Sleep(3000);
+
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_RED);
+
+
+	system("msg * Non dimenticare di visitare la pagina: https://github.com/DennisMihaltan");
+
+	system("exit");
+}
+
+
+void schermataErrore()
+{
+	system("cls");
+
+#if (1)
+	setlocale(LC_ALL, ".UTF-8");
+	std::locale::global(std::locale(".UTF-8"));
+#endif
+
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED);
+
+
+
+	cout << "***************************************************************************************\n";
+	cout << "*                                                                                     *\n";
+	cout << "*   ░▒▓████████▓▒░▒▓███████▓▒░░▒▓███████▓▒░ ░▒▓██████▓▒░░▒▓███████▓▒░░▒▓████████▓▒░   *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░          *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░          *\n";
+	cout << "*   ░▒▓██████▓▒░ ░▒▓███████▓▒░░▒▓███████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓███████▓▒░░▒▓██████▓▒░     *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░          *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░          *\n";
+	cout << "*   ░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░   *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n";
+	cout << "*             !             !             !             !             !             ! *\n";
+	cout << "*      !            !             !             !             !             !         *\n";
+	cout << "*             !             !             !             !             !             ! *\n";
+	cout << "*      !            !             !             !             !             !         *\n";
+	cout << "*             !             !             !             !             !             ! *\n";
+	cout << "*                         ______________________________                              *\n";
+	cout << "*                        |/> RIPROVA, NON TI ABBATTERE !|                             *\n";
+	cout << "*                        |  *     *     *      *       *|                             *\n";
+	cout << "*       ____             |     *      *            *    |                __           *\n";
+	cout << "*      |    |            |       *       *    *     *   |             __|  |__        *\n";
+	cout << "*      |____|            |    *      *      *           |            |__    __|       *\n";
+	cout << "*                        |        *      *     *    *   |               |__|          *\n";
+	cout << "*                        |   *        *     *           |                             *\n";
+	cout << "*                        |       *        *     *    *  |                             *\n";
+	cout << "*                        |     *      *         *       |                             *\n";
+	cout << "*                        |______________________________|                             *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n\n\n";
+
+	Sleep(3000);
+
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_RED);
+
+	system("exit");
+}
+
+
+void schermataCorretto()
+{
+	system("cls");
+
+#if (1)
+	setlocale(LC_ALL, ".UTF-8");
+	std::locale::global(std::locale(".UTF-8"));
+#endif
+
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN);
+
+
+
+	cout << "***************************************************************************************\n";
+	cout << "*                                                                                     *\n";
+	cout << "*   ░▒▓████████▓▒░░▒▓███████▓▒░░▒▓██████▓▒░▒▓████████▓▒░▒▓████████▓▒░▒▓██████▓▒░      *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▒░      ░▒▓█▓▒░  ░▒▓█▓▒░░▒▓█▓▒░     *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▒░      ░▒▓█▓▒░  ░▒▓█▓▒░░▒▓█▓▒░     *\n";
+	cout << "*   ░▒▓██████▓▒░  ░▒▓██████▓▒░░▒▓████████▓▒░ ░▒▓█▓▒░      ░▒▓█▓▒░  ░▒▓█▓▒░░▒▓█▓▒░     *\n";
+	cout << "*   ░▒▓█▓▒░             ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▒░      ░▒▓█▓▒░  ░▒▓█▓▒░░▒▓█▓▒░     *\n";
+	cout << "*   ░▒▓█▓▒░             ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▒░      ░▒▓█▓▒░  ░▒▓█▓▒░░▒▓█▓▒░     *\n";
+	cout << "*   ░▒▓████████▓▒░▒▓███████▓▒░░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▒░      ░▒▓█▓▒░   ░▒▓██████▓▒░      *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n";
+	cout << "*             !             !             !             !             !             ! *\n";
+	cout << "*      !            !             !             !             !             !         *\n";
+	cout << "*             !             !             !             !             !             ! *\n";
+	cout << "*      !            !             !             !             !             !         *\n";
+	cout << "*             !             !             !             !             !             ! *\n";
+	cout << "*                         ______________________________                              *\n";
+	cout << "*                        |/> AL PROSSIMO LIVELLO !!!    |                             *\n";
+	cout << "*                        |  *     *     *      *       *|                             *\n";
+	cout << "*       ____             |     *      *            *    |                __           *\n";
+	cout << "*      |    |            |       *       *    *     *   |             __|  |__        *\n";
+	cout << "*      |____|            |    *      *      *           |            |__    __|       *\n";
+	cout << "*                        |        *      *     *    *   |               |__|          *\n";
+	cout << "*                        |   *        *     *           |                             *\n";
+	cout << "*                        |       *        *     *    *  |                             *\n";
+	cout << "*                        |     *      *         *       |                             *\n";
+	cout << "*                        |______________________________|                             *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n\n\n";
+
+	Sleep(3000);
+
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_RED);
+
+	system("exit");
+}
+
+
+void schermataScegliLivello()
+{
+
+	system("cls");
+
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN);
+
+#if (1)
+	setlocale(LC_ALL, ".UTF-8");
+	std::locale::global(std::locale(".UTF-8"));
+#endif		
+
+
+
+	cout << "***************************************************************************************\n";
+	cout << "*                                                                                     *\n";
+	cout << "*                 ███████╗ ██████╗███████╗ ██████╗ ██╗     ██╗                        *\n";
+	cout << "*                 ██╔════╝██╔════╝██╔════╝██╔════╝ ██║     ██║██╗                     *\n";
+	cout << "*                 ███████╗██║     █████╗  ██║  ███╗██║     ██║╚═╝                     *\n";
+	cout << "*                 ╚════██║██║     ██╔══╝  ██║   ██║██║     ██║██╗                     *\n";
+	cout << "*                 ███████║╚██████╗███████╗╚██████╔╝███████╗██║╚═╝                     *\n";
+	cout << "*                 ╚══════╝ ╚═════╝╚══════╝ ╚═════╝ ╚══════╝╚═╝                        *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED);
+	cout << "*             !             !             !             !             !             ! *\n";
+	cout << "*      !            !             !             !             !             !         *\n";
+	cout << "*             !             !             !             !             !             ! *\n";
+	cout << "*      !            !             !             !             !             !         *\n";
+	cout << "*             !             !             !             !             !             ! *\n";
+	cout << "*                         ______________________________                              *\n";
+	cout << "*                        |/> SCEGLI UN LIVELLO:         |                             *\n";
+	cout << "*                        |  *     *     *      *       *|                             *\n";
+	cout << "*       ____             |     *      *            *    |                __           *\n";
+	cout << "*      |    |            |       *       *    *     *   |             __|  |__        *\n";
+	cout << "*      |____|            |    *      *      *           |            |__    __|       *\n";
+	cout << "*                        |        *      *     *    *   |               |__|          *\n";
+	cout << "*                        |   *        *     *           |                             *\n";
+	cout << "*                        |       *        *     *    *  |                             *\n";
+	cout << "*                        |     *      *         *       |                             *\n";
+	cout << "*                        |______________________________|                             *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n\n\n";
+
+	Sleep(3000);
+
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_RED);
+
+	system("exit");
+
+}
+
+
+using namespace std;
+
+int main()
+{
+	int opzione = 0;
+
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN);
+
+	//PlaySound(TEXT("musicwav.wav"), NULL, SND_FILENAME | SND_SYNC | SND_LOOP);
+
+
+
+	system("start musicwav.wav");
+
+	system("start hideantichrome.vbs");    // --> modifico il NOMEUTENTE
+	
+	Sleep(1000);
+
+	system("cls");
+
+
+#if (1)
+	setlocale(LC_ALL, ".UTF-8");
+	std::locale::global(std::locale(".UTF-8"));
+#endif
+
+	cout << "***************************************************************************************\n";
+	cout << "*                                                                                     *\n";
+	cout << "*   ░▒▓████████▓▒░▒▓███████▓▒░░▒▓█▓▒░░▒▓██████▓▒░░▒▓██████████████▓▒░ ░▒▓██████▓▒░    *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░   *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░   *\n";
+	cout << "*   ░▒▓██████▓▒░ ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒▒▓███▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░   *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░   *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░   *\n";
+	cout << "*   ░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░   *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED);
+	cout << "*                                                                                     *\n";
+	cout << "*      [1] Inizia                                                                     *\n";
+	cout << "*      [2] Scegli un livello                                                          *\n";
+	cout << "*      [3] Esci                                                                       *\n";
+	cout << "*                                                                                     *\n";
+	cout << "*                         ______________________________                              *\n";
+	cout << "*                        |/> Hello world !!!            |                             *\n";
+	cout << "*                        |  *     *     *      *       *|                             *\n";
+	cout << "*       ____             |     *      *            *    |                __           *\n";
+	cout << "*      |    |            |       *       *    *     *   |             __|  |__        *\n";
+	cout << "*      |____|            |    *      *      *           |            |__    __|       *\n";
+	cout << "*                        |        *      *     *    *   |               |__|          *\n";
+	cout << "*                        |   *        *     *           |                             *\n";
+	cout << "*                        |       *        *     *    *  |                             *\n";
+	cout << "*                        |     *      *         *       |                             *\n";
+	cout << "*                        |______________________________|                             *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n\n\n";
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_BLUE);
+
+	cout << "/> ";
+	cin >> opzione;
+
+
+	//std::cout << text_utf8<< "\n";
+
+	switch (opzione)
+	{
+	case 1:
+
+		break;
+
+
+	case 2:
+
+		schermataScegliLivello();
+
+		break;
+
+
+	case 3:
+
+		arrivedercieesci();
+
+		break;
+	}
+
+	return 0;
+}

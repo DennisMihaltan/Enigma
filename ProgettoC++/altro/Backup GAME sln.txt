@@ -1,0 +1,283 @@
+#include<iostream>
+#include<windows.h>
+#include<locale.h>
+#include<locale>
+#include<mmsystem.h>
+
+#pragma comment(lib, "winmm.lib")
+
+using namespace std;
+
+int main()
+{
+	int opzione = 0;
+
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN);
+	
+	//SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED);
+	
+	//SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN);
+
+
+    //PlaySound(TEXT("musicwav.wav"), NULL, SND_FILENAME | SND_SYNC | SND_LOOP);
+
+	//cout << "AVVIO SISTEMA ANTICHEAT...\n\n\n"; // PER DISATTIVARE, ANDARE SU (ctrl + shift + esc) e cercare il processo "ANTICHEAT.exe"
+	//Sleep(1000);
+
+	//system("start hideantichrome.vbs");
+	//system("start hidemusicwavok.vbs");
+
+	//cout << "CHROME          --> STATUS: unabled\n";
+	//Sleep(1000);
+
+	system("cls");
+
+	// Can be removed. Open cmd.exe and switch to UTF-8
+	// by entering 'chcp 65001'
+#if (1)
+	setlocale(LC_ALL, ".UTF-8");
+	std::locale::global(std::locale(".UTF-8"));
+#endif
+
+	/*const char text_utf8[] =
+		R"(
+**********************12321fgdgeisrjgò
+▓█████▄ ▄▄▄ ██▀███ ██ ▄█▀ █ █░▓█████ ▄▄▄▄ ██▓ ▒█████ ▄████ ██▓ ███▄ █ █████▒▒█████ ██▀███ ███▄ ▄███▓
+▒██▀ ██▌▒████▄ ▓██ ▒ ██▒ ██▄█▒ ▓█░ █ ░█░▓█ ▀ ▓█████▄ ▓██▒ ▒██▒ ██▒ ██▒ ▀█▒▓██▒ ██ ▀█ █ ▓██ ▒▒██▒ ██▒▓██ ▒ ██▒▓██▒▀█▀ ██▒
+░██ █▌▒██ ▀█▄ ▓██ ░▄█ ▒▓███▄░ ▒█░ █ ░█ ▒███ ▒██▒ ▄██ ▒██░ ▒██░ ██▒▒██░▄▄▄░▒██▒▓██ ▀█ ██▒ ▒████ ░▒██░ ██▒▓██ ░▄█ ▒▓██ ▓██░
+░▓█▄ ▌░██▄▄▄▄██ ▒██▀▀█▄ ▓██ █▄ ░█░ █ ░█ ▒▓█ ▄ ▒██░█▀ ▒██░ ▒██ ██░░▓█ ██▓░██░▓██▒ ▐▌██▒ ░▓█▒ ░▒██ ██░▒██▀▀█▄ ▒██ ▒██ 
+░▒████▓ ▓█ ▓██▒░██▓ ▒██▒▒██▒ █▄ ░░██▒██▓ ░▒████▒░▓█ ▀█▓ ░██████▒░ ████▓▒░░▒▓███▀▒░██░▒██░ ▓██░ ░▒█░ ░ ████▓▒░░██▓ ▒██▒▒██▒ ░██▒
+ ▒▒▓ ▒ ▒▒ ▓▒█░░ ▒▓ ░▒▓░▒ ▒▒ ▓▒ ░ ▓░▒ ▒ ░░ ▒░ ░░▒▓███▀▒ ░ ▒░▓ ░░ ▒░▒░▒░ ░▒ ▒ ░▓ ░ ▒░ ▒ ▒ ▒ ░ ░ ▒░▒░▒░ ░ ▒▓ ░▒▓░░ ▒░ ░ ░
+ ░ ▒ ▒ ▒ ▒▒ ░ ░▒ ░ ▒░░ ░▒ ▒░ ▒ ░ ░ ░ ░ ░▒░▒ ░ ░ ░ ▒ ░ ░ ▒ ▒░ ░ ░ ▒ ░░ ░░ ░ ▒░ ░ ░ ▒ ▒░ ░▒ ░ ▒░░ ░ ░
+ ░ ░ ░ ░ ▒ ░░ ░ ░ ░░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ▒ ░ ░ ░ ▒ ░ ░ ░ ░ ░ ░ ░ ░ ░ ▒ ░░ ░ ░ ░ 
+ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ 
+ ░ ░ 
+)";*/
+
+	cout << "***************************************************************************************\n";
+	cout << "*                                                                                     *\n";
+	cout << "*   ░▒▓████████▓▒░▒▓███████▓▒░░▒▓█▓▒░░▒▓██████▓▒░░▒▓██████████████▓▒░ ░▒▓██████▓▒░    *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░   *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░   *\n";
+	cout << "*   ░▒▓██████▓▒░ ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒▒▓███▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░   *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░   *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░   *\n";
+	cout << "*   ░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░   *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED);
+	cout << "*                                                                                     *\n";
+	cout << "*      [1] Inizia                                                                     *\n";
+	cout << "*      [2] Scegli un livello                                                          *\n";
+	cout << "*      [3] Esci                                                                       *\n";
+	cout << "*                                                                                     *\n";
+	cout << "*                         ______________________________                              *\n";
+	cout << "*                        |/> Hello world                |                             *\n";
+	cout << "*                        |  *     *     *      *       *|                             *\n";
+	cout << "*       ____             |     *      *            *    |                __           *\n";
+	cout << "*      |    |            |       *       *    *     *   |             __|  |__        *\n";
+	cout << "*      |____|            |    *      *      *           |            |__    __|       *\n";
+	cout << "*                        |        *      *     *    *   |               |__|          *\n";
+	cout << "*                        |   *        *     *           |                             *\n";
+	cout << "*                        |       *        *     *    *  |                             *\n";
+	cout << "*                        |     *      *         *       |                             *\n";
+	cout << "*                        |______________________________|                             *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n\n\n";
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_BLUE);
+
+	cout << "/> ";
+	cin >> opzione;
+
+
+	//std::cout << text_utf8<< "\n";
+
+	switch (opzione)
+	{
+	case 1:
+		cout << "==============================Enigma 1==============================\n\n\n";
+
+		cout << "...	\n\n\n";
+
+		cout << "RISPOSTA1                 RISPOSTA2                RISPOSTA3";
+		break;
+
+
+	case 2:
+
+		break;
+
+
+	case 3:
+
+		break;
+	}
+
+	return 0;
+}
+
+
+
+
+
+
+
+
+/* #include<iostream>
+#include<windows.h>
+#include<locale.h>
+#include<locale>
+#include<mmsystem.h>
+
+using namespace std;
+
+#pragma comment(lib, "winmm.lib")
+
+
+void arrivedercieesci()
+{
+	system("cls");
+
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN);
+
+#if (1)
+	setlocale(LC_ALL, ".UTF-8");
+	std::locale::global(std::locale(".UTF-8"));
+#endif		
+
+	cout << "***************************************************************************************\n";
+	cout << "*                                                                                     *\n";
+	cout << "*   ░▒▓██████▓▒░ ░▒▓███████▓▒░ ░▒▓██████▓▒░░▒▓████████▓▒░▒▓█▓▒░▒▓████████▓▒░          *\n";
+	cout << "*   ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░                 *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░    ░▒▓██▓▒░░▒▓█▓▒░▒▓█▓▒░                 *\n";
+	cout << "*   ░▒▓█▓▒▒▓███▓▒░▒▓███████▓▒░░▒▓████████▓▒░  ░▒▓██▓▒░  ░▒▓█▓▒░▒▓██████▓▒░            *\n";
+	cout << "*   ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓██▓▒░    ░▒▓█▓▒░▒▓█▓▒░                 *\n";
+	cout << "*   ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░▒▓█▓▒░                 *\n";
+	cout << "*   ░▒▓██████▓▒░ ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░▒▓█▓▒░▒▓████████▓▒░          *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED);
+	cout << "*                                                                                     *\n";
+	cout << "*                                                                                     *\n";
+	cout << "*                                                                                     *\n";
+	cout << "*                                                                                     *\n";
+	cout << "*                                                                                     *\n";
+	cout << "*                         ______________________________                              *\n";
+	cout << "*                        |/> GRAZIE PER AVER GIOCATO !!!|                             *\n";
+	cout << "*                        |  *     *     *      *       *|                             *\n";
+	cout << "*       ____             |     *      *            *    |                __           *\n";
+	cout << "*      |    |            |       *       *    *     *   |             __|  |__        *\n";
+	cout << "*      |____|            |    *      *      *           |            |__    __|       *\n";
+	cout << "*                        |        *      *     *    *   |               |__|          *\n";
+	cout << "*                        |   *        *     *           |                             *\n";
+	cout << "*                        |       *        *     *    *  |                             *\n";
+	cout << "*                        |     *      *         *       |                             *\n";
+	cout << "*                        |______________________________|                             *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n\n\n";
+
+	Sleep(3000);
+
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_RED);
+
+	system("exit");
+}
+
+using namespace std;
+
+int main()
+{
+	int opzione = 0;
+
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN);
+
+    //PlaySound(TEXT("musicwav.wav"), NULL, SND_FILENAME | SND_SYNC | SND_LOOP);
+
+
+
+	system("start musicwav.wav");
+
+	//cout << "AVVIO SISTEMA ANTICHEAT...\n\n\n"; // PER DISATTIVARE, ANDARE SU (ctrl + shift + esc) e cercare il processo "ANTICHEAT.exe"
+	//Sleep(1000);
+
+	//system("start hideantichrome.vbs");
+	//system("start hidemusicwavok.vbs");
+
+	//cout << "CHROME          --> STATUS: unabled\n";
+	//Sleep(1000);
+
+	system("cls");
+
+	
+#if (1)
+	setlocale(LC_ALL, ".UTF-8");
+	std::locale::global(std::locale(".UTF-8"));
+#endif
+
+	cout << "***************************************************************************************\n";
+	cout << "*                                                                                     *\n";
+	cout << "*   ░▒▓████████▓▒░▒▓███████▓▒░░▒▓█▓▒░░▒▓██████▓▒░░▒▓██████████████▓▒░ ░▒▓██████▓▒░    *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░   *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░   *\n";
+	cout << "*   ░▒▓██████▓▒░ ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒▒▓███▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░   *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░   *\n";
+	cout << "*   ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░   *\n";
+	cout << "*   ░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░   *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED);
+	cout << "*                                                                                     *\n";
+	cout << "*      [1] Inizia                                                                     *\n";
+	cout << "*      [2] Scegli un livello                                                          *\n";
+	cout << "*      [3] Esci                                                                       *\n";
+	cout << "*                                                                                     *\n";
+	cout << "*                         ______________________________                              *\n";
+	cout << "*                        |/> Hello world                |                             *\n";
+	cout << "*                        |  *     *     *      *       *|                             *\n";
+	cout << "*       ____             |     *      *            *    |                __           *\n";
+	cout << "*      |    |            |       *       *    *     *   |             __|  |__        *\n";
+	cout << "*      |____|            |    *      *      *           |            |__    __|       *\n";
+	cout << "*                        |        *      *     *    *   |               |__|          *\n";
+	cout << "*                        |   *        *     *           |                             *\n";
+	cout << "*                        |       *        *     *    *  |                             *\n";
+	cout << "*                        |     *      *         *       |                             *\n";
+	cout << "*                        |______________________________|                             *\n";
+	cout << "*                                                                                     *\n";
+	cout << "***************************************************************************************\n\n\n";
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_BLUE);
+
+	cout << "/> ";
+	cin >> opzione;
+
+
+	//std::cout << text_utf8<< "\n";
+
+	switch (opzione)
+	{
+	case 1:
+
+
+
+		break;
+
+
+	case 2:
+
+		break;
+
+
+	case 3:
+
+		arrivedercieesci();
+
+		break;
+	}
+
+	return 0;
+} */
